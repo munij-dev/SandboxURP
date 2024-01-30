@@ -1,0 +1,22 @@
+/*
+ * Created by: #AUTHOR#
+ * Project: #PROJECT_NAME#
+ * Date created: #CREATION_DATE#
+ */
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+/// <summary>
+/// 
+/// 
+/// </summary>
+
+    #ROOTNAMESPACEBEGIN#
+[CreateAssetMenu(fileName = "#SCRIPTNAME#", menuName = "#SCRIPTNAME#")]
+public class #SCRIPTNAME# : ScriptableObject
+{
+    #NOTRIM#
+}
+#ROOTNAMESPACEEND#

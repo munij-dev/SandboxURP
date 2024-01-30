@@ -1,0 +1,43 @@
+/*
+ * Created by: #AUTHOR#
+ * Project: #PROJECT_NAME#
+ * Date created: #CREATION_DATE#
+ */
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+/// <summary>
+/// 
+/// </summary>
+
+    #ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME# : MonoBehaviour
+{
+    //______________________________________________________//  public static |
+    
+    //______________________________________________________//         public |
+
+    //______________________________________________________// private static |
+    
+    //______________________________________________________//        private |
+
+    //______________________________________________________//      protected |
+
+    // ______________________________________________________//  constructors |
+
+    // ______________________________________________________//       methods |
+
+    
+    private void Start()
+    {
+        #NOTRIM#
+    }
+
+    private void Update()
+    {
+        #NOTRIM#
+    }
+}
+#ROOTNAMESPACEEND#
