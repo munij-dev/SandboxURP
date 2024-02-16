@@ -18,12 +18,16 @@ using UnityEngine.InputSystem;
 public class InputReader : ScriptableObject, CharacterControls.IPlayerActions
 {
 	//______________________________________________________//  public static |
+	
+	public static bool IsPaused = false;
+	
 	//______________________________________________________//         public |
 	
 	public event UnityAction<float> Move = delegate { };
 	public event UnityAction<bool> Jump = delegate { };
 	public event UnityAction<bool> Interact = delegate { };
 	public event UnityAction<Vector2> Look = delegate { };
+	public event UnityAction<bool> Pause = delegate { };
 	
 	//______________________________________________________// private static |
 	//______________________________________________________//        private |
@@ -32,8 +36,8 @@ public class InputReader : ScriptableObject, CharacterControls.IPlayerActions
 	private CharacterControls.PlayerActions _playerActions;
 	
 	//______________________________________________________//      protected |
-	// ______________________________________________________//  constructors |
-	// ______________________________________________________//       methods |
+	//_______________________________________________________//  constructors |
+	//_______________________________________________________//       methods |
 	
 	// Handle subscriptions
 	/*
@@ -51,6 +55,7 @@ public class InputReader : ScriptableObject, CharacterControls.IPlayerActions
 		_playerActions.Jump.performed += OnJump;
 		_playerActions.Move.performed += OnMove;
 		_playerActions.Look.performed += OnLook;
+		_playerActions.Pause.performed += OnPause;
 	}
 	
 	private void OnDisable()
@@ -59,25 +64,57 @@ public class InputReader : ScriptableObject, CharacterControls.IPlayerActions
 		_playerActions.Jump.performed -= OnJump;
 		_playerActions.Move.performed -= OnMove;
 		_playerActions.Look.performed -= OnLook;
+		_playerActions.Pause.performed -= OnPause;
 	}
 	
 	public void OnInteract(InputAction.CallbackContext context)
 	{
-
+		if (context.performed)
+		{
+			
+		}
 	}
 	
 	public void OnJump(InputAction.CallbackContext context)
 	{
-
+		if (context.performed)
+		{
+			
+		}
 	}
 	
 	public void OnMove(InputAction.CallbackContext context)
 	{
-
+		if (context.performed)
+		{
+			
+		}
 	}
 	
 	public void OnLook(InputAction.CallbackContext context)
 	{
+		if (context.performed)
+		{
+			
+		}
+	}
 
+	public void OnPause(InputAction.CallbackContext context)
+	{
+		if (context.phase == InputActionPhase.Performed)
+		{
+			if (IsPaused) ResumeGame();
+			else PauseGame();
+		}
+	}
+
+	public void ResumeGame()
+	{
+		
+	}
+
+	public void PauseGame()
+	{
+		
 	}
 }
