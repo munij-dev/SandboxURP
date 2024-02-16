@@ -7,7 +7,7 @@
 using UnityEngine;
 
 namespace _Base.EventTypes
-{
+{ 
  [CreateAssetMenu(fileName = "VoidEvent", menuName = "Event/Void Event")]
  public class VoidEvent : Event<Void>
  {

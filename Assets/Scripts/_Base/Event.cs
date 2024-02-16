@@ -34,8 +34,8 @@ public abstract class Event<T> : ScriptableObject
 		_isNotifying = true;
 	    for (int i = _listeners.Count - 1; i >= 0; i--)
 	    {
-		    // Notify events in reverse to avoid a self destruction event error.
-		    _listeners[i].OnEventRaised(param);
+		    // Notify events in reverse to avoid errors with self destructed events.
+		    _listeners[i].OnNotify(param);
 	    }
 	    _isNotifying = false;
 	}

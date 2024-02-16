@@ -14,18 +14,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     //______________________________________________________//  public static |
-    
     //______________________________________________________//         public |
     [Header("PlayerData handlers")]
-    [SerializeField] private InputReader inputReader;
-    //______________________________________________________// private static |
+    [SerializeField] private InputReader _inputReader;
     
+    //______________________________________________________// private static |
     //______________________________________________________//        private |
-
     //______________________________________________________//      protected |
-
     // ______________________________________________________//  constructors |
-
     // ______________________________________________________//       methods |
     
 }

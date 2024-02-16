@@ -8,5 +8,5 @@ using _Base.EventTypes;
 
 namespace _Base.ListenerTypes
 {
- public class VoidListener : Listener<Void, VoidEvent, UnityVoidEvent>{ }
+ public class VoidListener : Listener<Void, VoidEvent, UnityVoidEvent> { }
 }

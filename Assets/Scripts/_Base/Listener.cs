@@ -33,8 +33,8 @@ public abstract class Listener<T, TEvent, TUnityEvent> : MonoBehaviour,
     [SerializeField] private TUnityEvent _unityEventResponse;
     
     //______________________________________________________//      protected |
-    // ______________________________________________________//  constructors |
-    // ______________________________________________________//       methods |
+    //_______________________________________________________//  constructors |
+    //_______________________________________________________//       methods |
     
     // Handle subscription to events
     private void OnEnable()
@@ -51,5 +51,5 @@ public abstract class Listener<T, TEvent, TUnityEvent> : MonoBehaviour,
     }
 	
     // Invoke event upon notification from it
-	public void OnEventRaised(T param) => _unityEventResponse?.Invoke(param);
+	public void OnNotify(T param) => _unityEventResponse?.Invoke(param);
 }

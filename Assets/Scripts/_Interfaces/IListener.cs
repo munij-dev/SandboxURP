@@ -11,5 +11,5 @@
 
 public interface IListener<T>
 {
-    public void OnEventRaised(T param);
+    public void OnNotify(T param);
 }

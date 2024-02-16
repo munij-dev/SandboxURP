@@ -15,27 +15,12 @@ using System;
 
 public class EventList<T> : IEnumerable<T>
 {
-    //______________________________________________________//  public static |
-    
-    //______________________________________________________//         public |
-    
     public event Action OnModified;
-
-    //______________________________________________________// private static |
-    
-    //______________________________________________________//        private |
-    
     private List<T> _list;
-
-    //______________________________________________________//      protected |
-    
-    // ______________________________________________________//  constructors |
     
     public EventList() {
         this._list = new List<T>();
     }
-
-    // ______________________________________________________//       methods |
     
     public void Add(T item) {
         _list.Add(item);
